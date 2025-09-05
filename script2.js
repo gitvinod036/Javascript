@@ -6,7 +6,10 @@ function ONIncrement(){
       let val=parseInt(count_ele.textContent)
       if (val>0){
         count_ele.style.color="green"
-      }else{
+      }else if (val<0){
+        count_ele.style.color="red"
+      }
+      else{
         count_ele.style.color="black"   
       }
 }
@@ -17,9 +20,11 @@ function ONDecrement(){
   count_ele.textContent=number-1    
 
   let val=parseInt(count_ele.textContent)
-       if (val<0){
+       if (val>0){
+        count_ele.style.color="green"
+      }else if (val<0){
         count_ele.style.color="red"
-      }else{
+       } else{
         count_ele.style.color="black"   
       }
 }
